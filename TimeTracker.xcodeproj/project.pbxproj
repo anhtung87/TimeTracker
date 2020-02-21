@@ -30,6 +30,7 @@
 		6D696A9A23FFFC4200BAA7AB /* Log In.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8D23FFFC4200BAA7AB /* Log In.png */; };
 		6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */; };
 		6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9D24000E7400BAA7AB /* CircleView.swift */; };
+		6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9F240018CE00BAA7AB /* CircleButton.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 		6D696A8D23FFFC4200BAA7AB /* Log In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Log In.png"; sourceTree = "<group>"; };
 		6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		6D696A9D24000E7400BAA7AB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		6D696A9F240018CE00BAA7AB /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */,
 				6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */,
 				6D696A9D24000E7400BAA7AB /* CircleView.swift */,
+				6D696A9F240018CE00BAA7AB /* CircleButton.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */,
 				6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */,
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
+				6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
 				6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */,
 				6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */,

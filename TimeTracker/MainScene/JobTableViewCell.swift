@@ -58,13 +58,9 @@ class JobTableViewCell: UITableViewCell {
     return label
   }()
   
-  let addButton: UIButton = {
-    let button = UIButton()
+  let addButton: CircleButton = {
+    let button = CircleButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("+", for: .normal)
-    button.titleLabel?.font = .boldSystemFont(ofSize: 16)
-    button.setTitleColor(.white, for: .normal)
-    button.backgroundColor = .systemTeal
     button.layer.cornerRadius = 15
     return button
   }()
