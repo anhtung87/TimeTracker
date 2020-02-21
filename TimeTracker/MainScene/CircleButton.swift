@@ -20,7 +20,7 @@ class CircleButton: UIButton {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    self.backgroundColor = .systemTeal
+    self.backgroundColor = hexStringToUIColor(hex: "66A8FB")
   }
   
   required init?(coder: NSCoder) {

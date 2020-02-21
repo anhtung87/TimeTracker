@@ -28,7 +28,7 @@ class QuarterCircleView: UIView {
     path.addLine(to: CGPoint(x: 0, y: 0))
     let shapeLayer = CAShapeLayer()
     shapeLayer.path = path.cgPath
-    shapeLayer.fillColor = UIColor.systemTeal.cgColor
+    shapeLayer.fillColor = hexStringToUIColor(hex: "66A8FB").cgColor
     self.layer.addSublayer(shapeLayer)
   }
   

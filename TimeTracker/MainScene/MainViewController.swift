@@ -57,23 +57,19 @@ class MainViewController: UIViewController {
     return collectionView
   }()
   
-  let stateJobSegmentedControl: UISegmentedControl = {
-    let segmentedControl = UISegmentedControl(items: ["Đang thực hiện", "Hoàn thành"])
+  let stateJobSegmentedControl: StateSegmentedControl = {
+    let segmentedControl = StateSegmentedControl(items: ["Đang thực hiện", "Hoàn thành"])
     segmentedControl.translatesAutoresizingMaskIntoConstraints = false
     segmentedControl.selectedSegmentIndex = 0
-    segmentedControl.tintColor = .systemTeal
-    segmentedControl.selectedSegmentTintColor = .systemTeal
-    segmentedControl.layer.cornerRadius = 15
-    segmentedControl.layer.borderColor = UIColor.systemTeal.cgColor
-    segmentedControl.layer.borderWidth = 1
-    segmentedControl.layer.masksToBounds = true
+    segmentedControl.tintColor = hexStringToUIColor(hex: "66A8FB")
+    segmentedControl.selectedSegmentTintColor = hexStringToUIColor(hex: "66A8FB")
     return segmentedControl
   }()
   
   let jobTableView: UITableView = {
     let tableView = UITableView()
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.backgroundColor = .white
+    tableView.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "JobCell")
     tableView.separatorStyle = .none
     return tableView
@@ -83,7 +79,7 @@ class MainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
+    view.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     setupNavigation()
     setupView()
     setupLayout()
@@ -134,12 +130,12 @@ class MainViewController: UIViewController {
     reviewCollectionView.heightAnchor.constraint(equalTo: reviewCollectionView.widthAnchor, multiplier: 0.585).isActive = true
     
     stateJobSegmentedControl.topAnchor.constraint(equalTo: reviewCollectionView.bottomAnchor,
-                                                  constant: UIScreen.main.bounds.height / 20).isActive = true
+                                                  constant: 32).isActive = true
     stateJobSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
     stateJobSegmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
-    stateJobSegmentedControl.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    stateJobSegmentedControl.heightAnchor.constraint(equalToConstant: 32).isActive = true
     
-    jobTableView.topAnchor.constraint(equalTo: stateJobSegmentedControl.bottomAnchor, constant: UIScreen.main.bounds.height / 20).isActive = true
+    jobTableView.topAnchor.constraint(equalTo: stateJobSegmentedControl.bottomAnchor, constant: 32).isActive = true
     jobTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     jobTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
     jobTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true

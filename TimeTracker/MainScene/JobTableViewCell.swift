@@ -80,6 +80,7 @@ class JobTableViewCell: UITableViewCell {
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
+    self.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     setupView()
     setupLayout()
   }
