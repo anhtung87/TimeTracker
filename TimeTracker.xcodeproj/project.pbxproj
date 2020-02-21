@@ -12,6 +12,8 @@
 		6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6423FF961300BAA7AB /* CircleImageView.swift */; };
 		6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */; };
 		6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */; };
+		6D696A6D23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */; };
+		6D696A6E23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */; };
 		6D8EA38A23FA76190064FB99 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38923FA76190064FB99 /* CustomTextField.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 		6D696A6423FF961300BAA7AB /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCircleView.swift; sourceTree = "<group>"; };
+		6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.40.png"; sourceTree = "<group>"; };
+		6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.09.png"; sourceTree = "<group>"; };
 		6D8EA38923FA76190064FB99 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = ../../../../UserInterfaceExercises/RiskTimeTracking/RiskTimeTracking/Login/View/CustomTextField.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +69,15 @@
 			path = MainScene;
 			sourceTree = "<group>";
 		};
+		6D696A6A23FFF82D00BAA7AB /* IMGS */ = {
+			isa = PBXGroup;
+			children = (
+				6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */,
+				6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */,
+			);
+			path = IMGS;
+			sourceTree = "<group>";
+		};
 		6D8EA38B23FA763A0064FB99 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 		6DADFA1E23F3E0790010D080 = {
 			isa = PBXGroup;
 			children = (
+				6D696A6A23FFF82D00BAA7AB /* IMGS */,
 				6DADFA2923F3E0790010D080 /* TimeTracker */,
 				6DADFA2823F3E0790010D080 /* Products */,
 			);
@@ -174,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DADFA3723F3E07B0010D080 /* LaunchScreen.storyboard in Resources */,
+				6D696A6E23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png in Resources */,
 				6DADFA3423F3E07B0010D080 /* Assets.xcassets in Resources */,
+				6D696A6D23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png in Resources */,
 				6DADFA3223F3E0790010D080 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
