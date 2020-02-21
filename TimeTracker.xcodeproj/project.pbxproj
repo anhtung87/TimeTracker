@@ -14,6 +14,8 @@
 		6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */; };
 		6D696A6D23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */; };
 		6D696A6E23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */; };
+		6D696A7223FFF99000BAA7AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A7023FFF99000BAA7AB /* ViewController.swift */; };
+		6D696A7323FFF99000BAA7AB /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A7123FFF99000BAA7AB /* ScreenView.swift */; };
 		6D8EA38A23FA76190064FB99 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38923FA76190064FB99 /* CustomTextField.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCircleView.swift; sourceTree = "<group>"; };
 		6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.40.png"; sourceTree = "<group>"; };
 		6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.09.png"; sourceTree = "<group>"; };
+		6D696A7023FFF99000BAA7AB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D696A7123FFF99000BAA7AB /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 		6D8EA38923FA76190064FB99 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = ../../../../UserInterfaceExercises/RiskTimeTracking/RiskTimeTracking/Login/View/CustomTextField.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,15 @@
 				6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */,
 			);
 			path = IMGS;
+			sourceTree = "<group>";
+		};
+		6D696A6F23FFF99000BAA7AB /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				6D696A7023FFF99000BAA7AB /* ViewController.swift */,
+				6D696A7123FFF99000BAA7AB /* ScreenView.swift */,
+			);
+			name = LoginScene;
 			sourceTree = "<group>";
 		};
 		6D8EA38B23FA763A0064FB99 /* Shared */ = {
@@ -125,6 +138,7 @@
 				6DADFA6523F501E70010D080 /* ScreenView.swift */,
 				6DADFA2E23F3E0790010D080 /* ViewController.swift */,
 				6D8EA38923FA76190064FB99 /* CustomTextField.swift */,
+				6D696A6F23FFF99000BAA7AB /* LoginScene */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -208,10 +222,12 @@
 				6DADFA2F23F3E0790010D080 /* ViewController.swift in Sources */,
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
+				6D696A7223FFF99000BAA7AB /* ViewController.swift in Sources */,
 				6D8EA38A23FA76190064FB99 /* CustomTextField.swift in Sources */,
 				6DADFA6623F501E70010D080 /* ScreenView.swift in Sources */,
 				6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */,
 				6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */,
+				6D696A7323FFF99000BAA7AB /* ScreenView.swift in Sources */,
 				6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
