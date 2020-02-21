@@ -57,6 +57,30 @@ class MainViewController: UIViewController {
     return collectionView
   }()
   
+  let stateJobSegmentedControl: UISegmentedControl = {
+    let segmentedControl = UISegmentedControl(items: ["Đang thực hiện", "Hoàn thành"])
+    segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+    segmentedControl.selectedSegmentIndex = 0
+    segmentedControl.tintColor = .systemTeal
+    segmentedControl.selectedSegmentTintColor = .systemTeal
+    segmentedControl.layer.cornerRadius = 15
+    segmentedControl.layer.borderColor = UIColor.systemTeal.cgColor
+    segmentedControl.layer.borderWidth = 1
+    segmentedControl.layer.masksToBounds = true
+    return segmentedControl
+  }()
+  
+  let jobTableView: UITableView = {
+    let tableView = UITableView()
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.backgroundColor = .white
+    tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "JobCell")
+    tableView.separatorStyle = .none
+    return tableView
+  }()
+  
+// MARK: viewController lifecycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
@@ -64,8 +88,10 @@ class MainViewController: UIViewController {
     setupView()
     setupLayout()
     setupReviewCollectionView()
-    
+    setupJobTableView()
   }
+  
+// MARK: setup
   
   func setupNavigation() {
     navigationItem.leftBarButtonItem = UIBarButtonItem()
@@ -77,6 +103,8 @@ class MainViewController: UIViewController {
     view.addSubview(departmentLabel)
     view.addSubview(avatarImageView)
     view.addSubview(reviewCollectionView)
+    view.addSubview(stateJobSegmentedControl)
+    view.addSubview(jobTableView)
   }
   
   func setupLayout() {
@@ -104,11 +132,27 @@ class MainViewController: UIViewController {
     reviewCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     reviewCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
     reviewCollectionView.heightAnchor.constraint(equalTo: reviewCollectionView.widthAnchor, multiplier: 0.585).isActive = true
+    
+    stateJobSegmentedControl.topAnchor.constraint(equalTo: reviewCollectionView.bottomAnchor,
+                                                  constant: UIScreen.main.bounds.height / 20).isActive = true
+    stateJobSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+    stateJobSegmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
+    stateJobSegmentedControl.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    
+    jobTableView.topAnchor.constraint(equalTo: stateJobSegmentedControl.bottomAnchor, constant: UIScreen.main.bounds.height / 20).isActive = true
+    jobTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+    jobTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+    jobTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
   }
   
   func setupReviewCollectionView() {
     reviewCollectionView.delegate = self
     reviewCollectionView.dataSource = self
+  }
+  
+  func setupJobTableView() {
+    jobTableView.delegate = self
+    jobTableView.dataSource = self
   }
 }
 
@@ -139,4 +183,19 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 0
   }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 20
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
+    cell.separatorInset = UIEdgeInsets.zero
+    cell.layoutMargins = UIEdgeInsets.zero
+    return cell
+  }
+  
+  
 }

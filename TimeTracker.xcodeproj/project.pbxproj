@@ -12,11 +12,24 @@
 		6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6423FF961300BAA7AB /* CircleImageView.swift */; };
 		6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */; };
 		6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */; };
-		6D696A6D23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */; };
-		6D696A6E23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */; };
 		6D696A7B23FFFB4600BAA7AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A7923FFFB4600BAA7AB /* ViewController.swift */; };
 		6D696A7C23FFFB4600BAA7AB /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A7A23FFFB4600BAA7AB /* ScreenView.swift */; };
 		6D696A8023FFFB7300BAA7AB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A7F23FFFB7300BAA7AB /* CustomTextField.swift */; };
+		6D696A8E23FFFC4200BAA7AB /* Pie Chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8123FFFC4200BAA7AB /* Pie Chart.png */; };
+		6D696A8F23FFFC4200BAA7AB /* Chart setting Week.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8223FFFC4200BAA7AB /* Chart setting Week.png */; };
+		6D696A9023FFFC4200BAA7AB /* Home Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8323FFFC4200BAA7AB /* Home Screen.png */; };
+		6D696A9123FFFC4200BAA7AB /* Add New Work.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8423FFFC4200BAA7AB /* Add New Work.png */; };
+		6D696A9223FFFC4200BAA7AB /* Change Password.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8523FFFC4200BAA7AB /* Change Password.png */; };
+		6D696A9323FFFC4200BAA7AB /* Chart Month.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8623FFFC4200BAA7AB /* Chart Month.png */; };
+		6D696A9423FFFC4200BAA7AB /* Forget Password.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8723FFFC4200BAA7AB /* Forget Password.png */; };
+		6D696A9523FFFC4200BAA7AB /* Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8823FFFC4200BAA7AB /* Setting.png */; };
+		6D696A9623FFFC4200BAA7AB /* Changed Information.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8923FFFC4200BAA7AB /* Changed Information.png */; };
+		6D696A9723FFFC4200BAA7AB /* Add working.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8A23FFFC4200BAA7AB /* Add working.png */; };
+		6D696A9823FFFC4200BAA7AB /* Chart Week.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8B23FFFC4200BAA7AB /* Chart Week.png */; };
+		6D696A9923FFFC4200BAA7AB /* Chart setting Month.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8C23FFFC4200BAA7AB /* Chart setting Month.png */; };
+		6D696A9A23FFFC4200BAA7AB /* Log In.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D696A8D23FFFC4200BAA7AB /* Log In.png */; };
+		6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */; };
+		6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9D24000E7400BAA7AB /* CircleView.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -31,11 +44,24 @@
 		6D696A6423FF961300BAA7AB /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCircleView.swift; sourceTree = "<group>"; };
-		6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.40.png"; sourceTree = "<group>"; };
-		6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-02-21 at 18.37.09.png"; sourceTree = "<group>"; };
 		6D696A7923FFFB4600BAA7AB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D696A7A23FFFB4600BAA7AB /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 		6D696A7F23FFFB7300BAA7AB /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6D696A8123FFFC4200BAA7AB /* Pie Chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pie Chart.png"; sourceTree = "<group>"; };
+		6D696A8223FFFC4200BAA7AB /* Chart setting Week.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart setting Week.png"; sourceTree = "<group>"; };
+		6D696A8323FFFC4200BAA7AB /* Home Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Screen.png"; sourceTree = "<group>"; };
+		6D696A8423FFFC4200BAA7AB /* Add New Work.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add New Work.png"; sourceTree = "<group>"; };
+		6D696A8523FFFC4200BAA7AB /* Change Password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Password.png"; sourceTree = "<group>"; };
+		6D696A8623FFFC4200BAA7AB /* Chart Month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart Month.png"; sourceTree = "<group>"; };
+		6D696A8723FFFC4200BAA7AB /* Forget Password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forget Password.png"; sourceTree = "<group>"; };
+		6D696A8823FFFC4200BAA7AB /* Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting.png; sourceTree = "<group>"; };
+		6D696A8923FFFC4200BAA7AB /* Changed Information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Changed Information.png"; sourceTree = "<group>"; };
+		6D696A8A23FFFC4200BAA7AB /* Add working.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add working.png"; sourceTree = "<group>"; };
+		6D696A8B23FFFC4200BAA7AB /* Chart Week.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart Week.png"; sourceTree = "<group>"; };
+		6D696A8C23FFFC4200BAA7AB /* Chart setting Month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart setting Month.png"; sourceTree = "<group>"; };
+		6D696A8D23FFFC4200BAA7AB /* Log In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Log In.png"; sourceTree = "<group>"; };
+		6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		6D696A9D24000E7400BAA7AB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +91,8 @@
 				6D696A6423FF961300BAA7AB /* CircleImageView.swift */,
 				6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */,
 				6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */,
+				6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */,
+				6D696A9D24000E7400BAA7AB /* CircleView.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -72,8 +100,19 @@
 		6D696A6A23FFF82D00BAA7AB /* IMGS */ = {
 			isa = PBXGroup;
 			children = (
-				6D696A6C23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png */,
-				6D696A6B23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png */,
+				6D696A8423FFFC4200BAA7AB /* Add New Work.png */,
+				6D696A8A23FFFC4200BAA7AB /* Add working.png */,
+				6D696A8523FFFC4200BAA7AB /* Change Password.png */,
+				6D696A8923FFFC4200BAA7AB /* Changed Information.png */,
+				6D696A8623FFFC4200BAA7AB /* Chart Month.png */,
+				6D696A8C23FFFC4200BAA7AB /* Chart setting Month.png */,
+				6D696A8223FFFC4200BAA7AB /* Chart setting Week.png */,
+				6D696A8B23FFFC4200BAA7AB /* Chart Week.png */,
+				6D696A8723FFFC4200BAA7AB /* Forget Password.png */,
+				6D696A8323FFFC4200BAA7AB /* Home Screen.png */,
+				6D696A8D23FFFC4200BAA7AB /* Log In.png */,
+				6D696A8123FFFC4200BAA7AB /* Pie Chart.png */,
+				6D696A8823FFFC4200BAA7AB /* Setting.png */,
 			);
 			path = IMGS;
 			sourceTree = "<group>";
@@ -106,9 +145,9 @@
 		6DADFA2923F3E0790010D080 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6DADFA6923F535EF0010D080 /* LoginScene */,
 				6D696A5F23FF76FB00BAA7AB /* MainScene */,
 				6D8EA38B23FA763A0064FB99 /* Shared */,
-				6DADFA6923F535EF0010D080 /* LoginScene */,
 				6DADFA2A23F3E0790010D080 /* AppDelegate.swift */,
 				6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */,
 				6DADFA3023F3E0790010D080 /* Main.storyboard */,
@@ -187,11 +226,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D696A9523FFFC4200BAA7AB /* Setting.png in Resources */,
+				6D696A9923FFFC4200BAA7AB /* Chart setting Month.png in Resources */,
+				6D696A9323FFFC4200BAA7AB /* Chart Month.png in Resources */,
+				6D696A9723FFFC4200BAA7AB /* Add working.png in Resources */,
+				6D696A9623FFFC4200BAA7AB /* Changed Information.png in Resources */,
+				6D696A8E23FFFC4200BAA7AB /* Pie Chart.png in Resources */,
+				6D696A9A23FFFC4200BAA7AB /* Log In.png in Resources */,
+				6D696A9823FFFC4200BAA7AB /* Chart Week.png in Resources */,
 				6DADFA3723F3E07B0010D080 /* LaunchScreen.storyboard in Resources */,
-				6D696A6E23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.09.png in Resources */,
 				6DADFA3423F3E07B0010D080 /* Assets.xcassets in Resources */,
-				6D696A6D23FFF89C00BAA7AB /* Screen Shot 2020-02-21 at 18.37.40.png in Resources */,
+				6D696A9023FFFC4200BAA7AB /* Home Screen.png in Resources */,
+				6D696A9123FFFC4200BAA7AB /* Add New Work.png in Resources */,
+				6D696A9423FFFC4200BAA7AB /* Forget Password.png in Resources */,
 				6DADFA3223F3E0790010D080 /* Main.storyboard in Resources */,
+				6D696A8F23FFFC4200BAA7AB /* Chart setting Week.png in Resources */,
+				6D696A9223FFFC4200BAA7AB /* Change Password.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,10 +255,12 @@
 				6D696A7B23FFFB4600BAA7AB /* ViewController.swift in Sources */,
 				6D696A8023FFFB7300BAA7AB /* CustomTextField.swift in Sources */,
 				6D696A6123FF771900BAA7AB /* MainViewController.swift in Sources */,
+				6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */,
 				6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */,
 				6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */,
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
+				6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */,
 				6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */,
 				6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */,
 				6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */,

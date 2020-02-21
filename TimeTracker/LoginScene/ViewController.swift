@@ -141,7 +141,7 @@ class ViewController: UIViewController {
     appNameLabel.trailingAnchor.constraint(equalTo: activateView.trailingAnchor, constant: 0).isActive = true
     appNameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 32).isActive = true
     
-    usernameTextField.topAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: 100).isActive = true
+    usernameTextField.topAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: UIScreen.main.bounds.height / 8).isActive = true
     usernameTextField.centerXAnchor.constraint(equalTo: appNameLabel.centerXAnchor, constant: 0).isActive = true
     usernameTextField.widthAnchor.constraint(equalTo: appNameLabel.widthAnchor, multiplier: 0.8).isActive = true
     usernameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -161,7 +161,7 @@ class ViewController: UIViewController {
     passwordImageView.widthAnchor.constraint(equalTo: passwordImageView.heightAnchor, multiplier: 1).isActive = true
     passwordImageView.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor, constant: 10).isActive = true
     
-    submitButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 100).isActive = true
+    submitButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: UIScreen.main.bounds.height / 8).isActive = true
     submitButton.leadingAnchor.constraint(equalTo: usernameTextField.leadingAnchor, constant: 0).isActive = true
     submitButton.trailingAnchor.constraint(equalTo: usernameTextField.trailingAnchor, constant: 0).isActive = true
     submitButton.heightAnchor.constraint(equalTo: usernameTextField.heightAnchor, multiplier: 1).isActive = true
