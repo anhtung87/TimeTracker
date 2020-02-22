@@ -11,6 +11,7 @@ import UIKit
 class PercentageCircleView: UIView {
 
   var percentage: Float?
+  var lineColor: UIColor?
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -24,7 +25,10 @@ class PercentageCircleView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     draw()
-    displayPercentage(percentage: percentage ?? 0)
+    displayPercentage(percentage: 0)
+    UIView.animate(withDuration: 0.5, animations: {
+      self.displayPercentage(percentage: self.percentage!)
+    })
   }
 
   func draw() {
@@ -46,7 +50,7 @@ class PercentageCircleView: UIView {
     let shapeLayer = CAShapeLayer()
     shapeLayer.path = path.cgPath
     shapeLayer.lineWidth = 5
-    shapeLayer.strokeColor = hexStringToUIColor(hex: "AAEAD6").cgColor
+    shapeLayer.strokeColor = lineColor?.cgColor
     shapeLayer.fillColor = UIColor.clear.cgColor
     self.layer.addSublayer(shapeLayer)
   }

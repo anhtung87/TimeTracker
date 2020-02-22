@@ -16,12 +16,30 @@ class MainViewController: UIViewController {
     return view
   }()
   
+  let horizontalLineView: UIView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = hexStringToUIColor(hex: "EAEFEF")
+    return view
+  }()
+  
+  let verticalLineView: UIView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = hexStringToUIColor(hex: "EAEFEF")
+    return view
+  }()
+  
   let nameLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = "Hoàng Anh Tùng"
     label.textColor = .white
     label.font = .boldSystemFont(ofSize: 16)
+    label.layer.shadowColor = UIColor.black.cgColor
+    label.layer.shadowOffset = CGSize(width: 0, height: 0)
+    label.layer.shadowRadius = 10
+    label.layer.shadowOpacity = 0.3
     return label
   }()
   
@@ -31,6 +49,10 @@ class MainViewController: UIViewController {
     label.text = "Trung tâm Quản Lý Dữ Liệu"
     label.textColor = .white
     label.font = .systemFont(ofSize: 16)
+    label.layer.shadowColor = UIColor.black.cgColor
+    label.layer.shadowOffset = CGSize(width: 0, height: 0)
+    label.layer.shadowRadius = 10
+    label.layer.shadowOpacity = 0.3
     return label
   }()
   
@@ -75,7 +97,7 @@ class MainViewController: UIViewController {
     return tableView
   }()
   
-// MARK: viewController lifecycle
+  // MARK: viewController lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -87,7 +109,7 @@ class MainViewController: UIViewController {
     setupJobTableView()
   }
   
-// MARK: setup
+  // MARK: setup
   
   func setupNavigation() {
     navigationItem.leftBarButtonItem = UIBarButtonItem()
@@ -99,6 +121,8 @@ class MainViewController: UIViewController {
     view.addSubview(departmentLabel)
     view.addSubview(avatarImageView)
     view.addSubview(reviewCollectionView)
+    view.addSubview(horizontalLineView)
+    view.addSubview(verticalLineView)
     view.addSubview(stateJobSegmentedControl)
     view.addSubview(jobTableView)
   }
@@ -108,6 +132,20 @@ class MainViewController: UIViewController {
     quarterCircleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -90).isActive = true
     quarterCircleView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
     quarterCircleView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
+    
+    verticalLineView.centerXAnchor.constraint(equalTo: reviewCollectionView.centerXAnchor, constant: 0).isActive = true
+    verticalLineView.centerYAnchor.constraint(equalTo: reviewCollectionView.centerYAnchor, constant: 0).isActive = true
+    verticalLineView.widthAnchor.constraint(equalToConstant: 1).isActive = true
+    verticalLineView.heightAnchor.constraint(
+      equalTo: reviewCollectionView.heightAnchor, multiplier: 0.8).isActive = true
+    
+    horizontalLineView.centerXAnchor.constraint(
+      equalTo: reviewCollectionView.centerXAnchor, constant: 0).isActive = true
+    horizontalLineView.centerYAnchor.constraint(
+      equalTo: reviewCollectionView.centerYAnchor, constant: 0).isActive = true
+    horizontalLineView.widthAnchor.constraint(
+      equalTo: reviewCollectionView.widthAnchor, multiplier: 0.9).isActive = true
+    horizontalLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
     
     nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
     nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
@@ -127,7 +165,8 @@ class MainViewController: UIViewController {
     reviewCollectionView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 32).isActive = true
     reviewCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     reviewCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-    reviewCollectionView.heightAnchor.constraint(equalTo: reviewCollectionView.widthAnchor, multiplier: 0.585).isActive = true
+    reviewCollectionView.heightAnchor.constraint(
+      equalTo: reviewCollectionView.widthAnchor, multiplier: 0.585).isActive = true
     
     stateJobSegmentedControl.topAnchor.constraint(equalTo: reviewCollectionView.bottomAnchor,
                                                   constant: 32).isActive = true
@@ -135,7 +174,7 @@ class MainViewController: UIViewController {
     stateJobSegmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
     stateJobSegmentedControl.heightAnchor.constraint(equalToConstant: 32).isActive = true
     
-    jobTableView.topAnchor.constraint(equalTo: stateJobSegmentedControl.bottomAnchor, constant: 32).isActive = true
+    jobTableView.topAnchor.constraint(equalTo: stateJobSegmentedControl.bottomAnchor, constant: 16).isActive = true
     jobTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     jobTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
     jobTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
@@ -160,23 +199,36 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCell", for: indexPath) as! ReviewCollectionViewCell
     cell.percentageView.percentage = 0.75
+    switch indexPath.row {
+      case 0:
+        cell.percentageView.lineColor = hexStringToUIColor(hex: "7CC3AD")
+      case 1:
+        cell.percentageView.lineColor = hexStringToUIColor(hex: "F2B53A")
+      case 2:
+        cell.percentageView.lineColor = hexStringToUIColor(hex: "ED7190")
+      default:
+        cell.percentageView.lineColor = hexStringToUIColor(hex: "AC68FF")
+    }
     return cell
   }
   
   // hàm trả về kích thước của Item
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = (collectionView.frame.size.width - 1) / 2
     let height = (collectionView.frame.size.height - 1) / 2
     return CGSize(width: width, height: height)
   }
   
   // hàm trả về khoảng cách giữa hai hàng
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 0
   }
   
   // hàm trả về khoảng cách giữa 2 item (tương tự 2 cột)
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 0
   }
 }

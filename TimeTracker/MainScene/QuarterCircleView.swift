@@ -28,8 +28,13 @@ class QuarterCircleView: UIView {
     path.addLine(to: CGPoint(x: 0, y: 0))
     let shapeLayer = CAShapeLayer()
     shapeLayer.path = path.cgPath
-    shapeLayer.fillColor = hexStringToUIColor(hex: "66A8FB").cgColor
-    self.layer.addSublayer(shapeLayer)
+    shapeLayer.fillColor = UIColor.blue.cgColor
+    let gradientLayer = CAGradientLayer()
+    gradientLayer.frame = self.bounds
+    gradientLayer.mask = shapeLayer
+    gradientLayer.colors = [hexStringToUIColor(hex: "66A8FB").cgColor, hexStringToUIColor(hex: "3B84F1").cgColor]
+    gradientLayer.locations = [0.0, 1.0]
+    self.layer.addSublayer(gradientLayer)
   }
-  
+
 }
