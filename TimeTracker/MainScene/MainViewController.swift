@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
   
   let quarterCircleView: QuarterCircleView = {
     let view = QuarterCircleView()
@@ -191,7 +191,7 @@ class MainViewController: UIViewController {
   }
 }
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 4
   }
@@ -233,7 +233,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   }
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 20
   }

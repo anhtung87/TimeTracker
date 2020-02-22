@@ -172,7 +172,7 @@ class ViewController: UIViewController {
   }
   
   @objc func routeToMainScene() {
-    let main = MainViewController()
+    let main = AppTabBarViewController()
     navigationController?.pushViewController(main, animated: true)
   }
 }

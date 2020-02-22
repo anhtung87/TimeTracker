@@ -32,6 +32,10 @@
 		6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9D24000E7400BAA7AB /* CircleView.swift */; };
 		6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696A9F240018CE00BAA7AB /* CircleButton.swift */; };
 		6D696AA224001C1300BAA7AB /* StateSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AA124001C1300BAA7AB /* StateSegmentedControl.swift */; };
+		6D696AA42400D11500BAA7AB /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AA32400D11500BAA7AB /* AppTabBarViewController.swift */; };
+		6D696AA82400E51100BAA7AB /* ChartWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */; };
+		6D696AAC2400EB3200BAA7AB /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AAB2400EB3200BAA7AB /* PieChartViewController.swift */; };
+		6D696AAF2400EB5400BAA7AB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AAE2400EB5400BAA7AB /* SettingViewController.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -66,6 +70,10 @@
 		6D696A9D24000E7400BAA7AB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		6D696A9F240018CE00BAA7AB /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		6D696AA124001C1300BAA7AB /* StateSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSegmentedControl.swift; sourceTree = "<group>"; };
+		6D696AA32400D11500BAA7AB /* AppTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
+		6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartWeekViewController.swift; sourceTree = "<group>"; };
+		6D696AAB2400EB3200BAA7AB /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		6D696AAE2400EB5400BAA7AB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,15 +98,8 @@
 		6D696A5F23FF76FB00BAA7AB /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				6D696AA52400E48900BAA7AB /* Views */,
 				6D696A6023FF771900BAA7AB /* MainViewController.swift */,
-				6D696A6223FF8E1500BAA7AB /* QuarterCircleView.swift */,
-				6D696A6423FF961300BAA7AB /* CircleImageView.swift */,
-				6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */,
-				6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */,
-				6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */,
-				6D696A9D24000E7400BAA7AB /* CircleView.swift */,
-				6D696A9F240018CE00BAA7AB /* CircleButton.swift */,
-				6D696AA124001C1300BAA7AB /* StateSegmentedControl.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -123,9 +124,57 @@
 			path = IMGS;
 			sourceTree = "<group>";
 		};
+		6D696AA52400E48900BAA7AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D696A6423FF961300BAA7AB /* CircleImageView.swift */,
+				6D696A6623FFB96500BAA7AB /* ReviewCollectionViewCell.swift */,
+				6D696A6823FFBAAB00BAA7AB /* PercentageCircleView.swift */,
+				6D696A9B24000BBA00BAA7AB /* JobTableViewCell.swift */,
+				6D696A9D24000E7400BAA7AB /* CircleView.swift */,
+				6D696A9F240018CE00BAA7AB /* CircleButton.swift */,
+				6D696AA124001C1300BAA7AB /* StateSegmentedControl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D696AA62400E4EB00BAA7AB /* ChartWeekScene */ = {
+			isa = PBXGroup;
+			children = (
+				6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */,
+			);
+			path = ChartWeekScene;
+			sourceTree = "<group>";
+		};
+		6D696AA92400E52900BAA7AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D696A6223FF8E1500BAA7AB /* QuarterCircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D696AAA2400EB1F00BAA7AB /* PieChartScene */ = {
+			isa = PBXGroup;
+			children = (
+				6D696AAB2400EB3200BAA7AB /* PieChartViewController.swift */,
+			);
+			path = PieChartScene;
+			sourceTree = "<group>";
+		};
+		6D696AAD2400EB4100BAA7AB /* SettingScene */ = {
+			isa = PBXGroup;
+			children = (
+				6D696AAE2400EB5400BAA7AB /* SettingViewController.swift */,
+			);
+			path = SettingScene;
+			sourceTree = "<group>";
+		};
 		6D8EA38B23FA763A0064FB99 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6D696AA32400D11500BAA7AB /* AppTabBarViewController.swift */,
+				6D696AA92400E52900BAA7AB /* Views */,
 				6D8EA38C23FA76470064FB99 /* Utilities.swift */,
 			);
 			path = Shared;
@@ -151,6 +200,9 @@
 		6DADFA2923F3E0790010D080 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6D696AAD2400EB4100BAA7AB /* SettingScene */,
+				6D696AAA2400EB1F00BAA7AB /* PieChartScene */,
+				6D696AA62400E4EB00BAA7AB /* ChartWeekScene */,
 				6DADFA6923F535EF0010D080 /* LoginScene */,
 				6D696A5F23FF76FB00BAA7AB /* MainScene */,
 				6D8EA38B23FA763A0064FB99 /* Shared */,
@@ -262,15 +314,19 @@
 				6D696A8023FFFB7300BAA7AB /* CustomTextField.swift in Sources */,
 				6D696A6123FF771900BAA7AB /* MainViewController.swift in Sources */,
 				6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */,
+				6D696AA42400D11500BAA7AB /* AppTabBarViewController.swift in Sources */,
 				6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */,
+				6D696AAC2400EB3200BAA7AB /* PieChartViewController.swift in Sources */,
 				6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */,
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
 				6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
 				6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */,
+				6D696AA82400E51100BAA7AB /* ChartWeekViewController.swift in Sources */,
 				6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */,
 				6D696AA224001C1300BAA7AB /* StateSegmentedControl.swift in Sources */,
 				6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */,
+				6D696AAF2400EB5400BAA7AB /* SettingViewController.swift in Sources */,
 				6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */,
 				6D696A7C23FFFB4600BAA7AB /* ScreenView.swift in Sources */,
 			);
