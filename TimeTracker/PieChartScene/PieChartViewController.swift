@@ -57,7 +57,7 @@ class PieChartViewController: UIViewController {
   let jobTypeLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Lưu ý"
+    label.text = "Loại công việc"
     label.font = .boldSystemFont(ofSize: 16)
     label.textColor = hexStringToUIColor(hex: "808D8D")
     return label
@@ -69,6 +69,7 @@ class PieChartViewController: UIViewController {
     tableView.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     tableView.register(JobTypeTableViewCell.self, forCellReuseIdentifier: "JobTypeCell")
     tableView.separatorStyle = .none
+    tableView.alwaysBounceVertical = false
     return tableView
   }()
   
@@ -127,7 +128,7 @@ class PieChartViewController: UIViewController {
     jobTypeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     jobTypeLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 19).isActive = true
     
-    jobTypeTableView.topAnchor.constraint(equalTo: jobTypeLabel.bottomAnchor, constant: 16).isActive = true
+    jobTypeTableView.topAnchor.constraint(equalTo: jobTypeLabel.bottomAnchor, constant: 8).isActive = true
     jobTypeTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     jobTypeTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
     jobTypeTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
@@ -179,8 +180,12 @@ extension PieChartViewController: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "JobTypeCell", for: indexPath) as! JobTypeTableViewCell
     cell.jobTypeLabel.text = jobPieChart![indexPath.row].name
     cell.jobTypeLabel.layer.borderColor = jobPieChart![indexPath.row].color.cgColor
+    cell.circleView.color = jobPieChart![indexPath.row].color
+    cell.percentLabel.text = "\(Int(jobPieChart![indexPath.row].percent * 100))%"
     return cell
   }
   
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.cellForRow(at: indexPath)?.isSelected = false
+  }
 }

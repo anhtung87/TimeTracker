@@ -101,6 +101,7 @@ class ChartWeekViewController: UIViewController {
     tableView.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     tableView.register(NoteTableViewCell.self, forCellReuseIdentifier: "NoteCell")
     tableView.separatorStyle = .none
+    tableView.alwaysBounceVertical = false
     return tableView
   }()
   
@@ -229,5 +230,7 @@ extension ChartWeekViewController: UITableViewDelegate, UITableViewDataSource {
     return cell
   }
   
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.cellForRow(at: indexPath)?.isSelected = false
+  }
 }

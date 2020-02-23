@@ -24,7 +24,6 @@ class ViewController: UIViewController {
   let activateView: UIView = {
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .systemTeal
     return view
   }()
   
@@ -76,9 +75,11 @@ class ViewController: UIViewController {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("Đăng nhập", for: .normal)
-    button.backgroundColor = .systemBlue
+    button.backgroundColor = .clear
     button.setTitleColor(.white, for: .normal)
     button.layer.cornerRadius = 20
+    button.layer.borderColor = UIColor.white.cgColor
+    button.layer.borderWidth = 1
     return button
   }()
   
@@ -110,6 +111,13 @@ class ViewController: UIViewController {
   func setupView() {
     view.addSubview(screenScrollView)
     screenScrollView.addSubview(activateView)
+    
+    let gradient = CAGradientLayer()
+    gradient.colors = [hexStringToUIColor(hex: "66A8FB").cgColor, hexStringToUIColor(hex: "3B84F1").cgColor]
+    gradient.locations = [0.0, 1.0]
+    gradient.frame = view.bounds
+    activateView.layer.addSublayer(gradient)
+    
     activateView.addSubview(logoImageView)
     activateView.addSubview(appNameLabel)
     activateView.addSubview(usernameTextField)
