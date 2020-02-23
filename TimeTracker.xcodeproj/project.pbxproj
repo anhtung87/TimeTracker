@@ -36,6 +36,9 @@
 		6D696AA82400E51100BAA7AB /* ChartWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */; };
 		6D696AAC2400EB3200BAA7AB /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AAB2400EB3200BAA7AB /* PieChartViewController.swift */; };
 		6D696AAF2400EB5400BAA7AB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AAE2400EB5400BAA7AB /* SettingViewController.swift */; };
+		6D696AB12402468900BAA7AB /* WeekChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AB02402468900BAA7AB /* WeekChartView.swift */; };
+		6D696AB32402791F00BAA7AB /* WeekChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AB22402791F00BAA7AB /* WeekChartCollectionViewCell.swift */; };
+		6D696AB52402874100BAA7AB /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AB42402874100BAA7AB /* NoteTableViewCell.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -74,6 +77,9 @@
 		6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartWeekViewController.swift; sourceTree = "<group>"; };
 		6D696AAB2400EB3200BAA7AB /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		6D696AAE2400EB5400BAA7AB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6D696AB02402468900BAA7AB /* WeekChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartView.swift; sourceTree = "<group>"; };
+		6D696AB22402791F00BAA7AB /* WeekChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D696AB42402874100BAA7AB /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				6D696AA72400E51100BAA7AB /* ChartWeekViewController.swift */,
+				6D696AB02402468900BAA7AB /* WeekChartView.swift */,
+				6D696AB22402791F00BAA7AB /* WeekChartCollectionViewCell.swift */,
+				6D696AB42402874100BAA7AB /* NoteTableViewCell.swift */,
 			);
 			path = ChartWeekScene;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D696A7B23FFFB4600BAA7AB /* ViewController.swift in Sources */,
+				6D696AB52402874100BAA7AB /* NoteTableViewCell.swift in Sources */,
 				6D696A8023FFFB7300BAA7AB /* CustomTextField.swift in Sources */,
 				6D696A6123FF771900BAA7AB /* MainViewController.swift in Sources */,
 				6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */,
@@ -321,6 +331,8 @@
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
 				6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
+				6D696AB12402468900BAA7AB /* WeekChartView.swift in Sources */,
+				6D696AB32402791F00BAA7AB /* WeekChartCollectionViewCell.swift in Sources */,
 				6D696A9E24000E7400BAA7AB /* CircleView.swift in Sources */,
 				6D696AA82400E51100BAA7AB /* ChartWeekViewController.swift in Sources */,
 				6D696A6923FFBAAB00BAA7AB /* PercentageCircleView.swift in Sources */,

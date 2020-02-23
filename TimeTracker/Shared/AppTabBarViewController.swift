@@ -19,6 +19,7 @@ class AppTabBarViewController: UITabBarController {
     super.viewDidLoad()
     view.backgroundColor = .white
     setupVC()
+    setupNavigation()
   }
   
   func setupVC() {
@@ -37,6 +38,10 @@ class AppTabBarViewController: UITabBarController {
     settingVC.tabBarItem.selectedImage = UIImage(named: "selected-setting")
     
     viewControllers = [homeVC, chartWeekVC, pieChartVC, settingVC]
+  }
+  
+  func setupNavigation() {
+    navigationItem.leftBarButtonItem = UIBarButtonItem()
   }
   
 }
