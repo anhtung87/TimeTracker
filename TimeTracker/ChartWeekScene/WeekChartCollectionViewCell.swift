@@ -39,6 +39,11 @@ class WeekChartCollectionViewCell: UICollectionViewCell {
     view.translatesAutoresizingMaskIntoConstraints = false
     view.layer.cornerRadius = 8
     view.backgroundColor = hexStringToUIColor(hex: "66A8FB")
+    let gradient = CAGradientLayer()
+    gradient.colors = [hexStringToUIColor(hex: "66A8FB").cgColor, hexStringToUIColor(hex: "3B84F1").cgColor]
+    gradient.locations = [0.0, 1.0]
+    gradient.frame = view.bounds
+    view.layer.addSublayer(gradient)
     return view
   }()
   
@@ -51,7 +56,6 @@ class WeekChartCollectionViewCell: UICollectionViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
     setupLayout()
-    addGradient()
   }
   
   required init?(coder: NSCoder) {
@@ -86,14 +90,5 @@ class WeekChartCollectionViewCell: UICollectionViewCell {
     hourView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0).isActive = true
     hourView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.6).isActive = true
     hourView.heightAnchor.constraint(equalToConstant: height / maxHour! * hour!).isActive = true
-  }
-  
-  func addGradient() {
-    let gradient = CAGradientLayer()
-    gradient.frame = CGRect(x: 0, y: 0, width: hourView.bounds.width, height: hourView.bounds.height)
-    gradient.colors = [hexStringToUIColor(hex: "66A8FB").cgColor, hexStringToUIColor(hex: "3B84F1").cgColor]
-    gradient.locations = [0.0, 1.0]
-    hourView.layer.addSublayer(gradient)
-//    hourView.layer.masksToBounds = true
   }
 }

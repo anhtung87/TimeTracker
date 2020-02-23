@@ -20,6 +20,7 @@ class NoteTableViewCell: UITableViewCell {
   let pointView: CircleView = {
     let view = CircleView()
     view.translatesAutoresizingMaskIntoConstraints = false
+    view.color = .systemRed
     return view
   }()
   
@@ -27,14 +28,22 @@ class NoteTableViewCell: UITableViewCell {
     let view = CircleView()
     view.translatesAutoresizingMaskIntoConstraints = false
     view.layer.opacity = 0.15
+    view.color = .systemRed
     return view
+  }()
+  
+  let warningIconImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.image = UIImage(named: "warning")
+    return imageView
   }()
   
   let timeLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Dự án"
-    label.font = .systemFont(ofSize: 12)
+    label.text = "22/11/2019"
+    label.font = .systemFont(ofSize: 14)
     label.textColor = hexStringToUIColor(hex: "B2C0BD")
     return label
   }()
@@ -43,16 +52,19 @@ class NoteTableViewCell: UITableViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 0
-    label.text = "Triển khai dự Án BCDE"
+    label.text = "Chưa nhập công việc"
     label.font = .boldSystemFont(ofSize: 16)
     label.textColor = hexStringToUIColor(hex: "313E3E")
     return label
   }()
   
-  let addButton: CircleButton = {
-    let button = CircleButton()
+  let updateButton: UIButton = {
+    let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.layer.cornerRadius = 15
+    button.layer.cornerRadius = 12
+    button.backgroundColor = hexStringToUIColor(hex: "66A8FB")
+    button.setTitle("Sửa", for: .normal)
+    button.titleLabel!.font = .systemFont(ofSize: 14)
     return button
   }()
   
@@ -71,9 +83,10 @@ class NoteTableViewCell: UITableViewCell {
     self.addSubview(lineView)
     self.addSubview(pointView)
     self.addSubview(bigPointView)
+    self.addSubview(warningIconImageView)
     self.addSubview(timeLabel)
     self.addSubview(contentLabel)
-    self.addSubview(addButton)
+    self.addSubview(updateButton)
   }
   
   func setupLayout() {
@@ -92,20 +105,25 @@ class NoteTableViewCell: UITableViewCell {
     bigPointView.widthAnchor.constraint(equalToConstant: 30).isActive = true
     bigPointView.heightAnchor.constraint(equalToConstant: 30).isActive = true
     
-    timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+    warningIconImageView.centerXAnchor.constraint(equalTo: pointView.centerXAnchor, constant: 0).isActive = true
+    warningIconImageView.centerYAnchor.constraint(equalTo: pointView.centerYAnchor, constant: 0).isActive = true
+    warningIconImageView.widthAnchor.constraint(equalTo: pointView.widthAnchor, multiplier: 0.8).isActive = true
+    warningIconImageView.heightAnchor.constraint(equalTo: pointView.heightAnchor, multiplier: 0.8).isActive = true
+    
+    timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
     timeLabel.leadingAnchor.constraint(equalTo: bigPointView.trailingAnchor, constant: 8).isActive = true
     timeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 16).isActive = true
     timeLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 12).isActive = true
     
-    contentLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 8).isActive = true
+    contentLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 6).isActive = true
     contentLabel.leadingAnchor.constraint(equalTo: timeLabel.leadingAnchor, constant: 0).isActive = true
     contentLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
-    contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
+    contentLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
     
-    addButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
-    addButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    addButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-    addButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    updateButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
+    updateButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+    updateButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+    updateButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
   }
   
   

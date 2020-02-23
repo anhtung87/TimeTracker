@@ -9,8 +9,16 @@
 import UIKit
 
 class CircleView: UIView {
+  
+  var color: UIColor {
+    didSet {
+      self.layer.removeFromSuperlayer()
+      self.draw()
+    }
+  }
 
   override init(frame: CGRect) {
+    color = hexStringToUIColor(hex: "FF9DB6")
     super.init(frame: frame)
   }
   
@@ -28,7 +36,7 @@ class CircleView: UIView {
                             cornerRadius: self.bounds.width / 2)
     let shapeLayer = CAShapeLayer()
     shapeLayer.path = path.cgPath
-    shapeLayer.fillColor = hexStringToUIColor(hex: "FF9DB6").cgColor
+    shapeLayer.fillColor = color.cgColor
     self.layer.addSublayer(shapeLayer)
     self.layer.masksToBounds = true
   }

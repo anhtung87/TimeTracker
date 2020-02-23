@@ -99,6 +99,8 @@ class ChartWeekViewController: UIViewController {
     let tableView = UITableView()
     tableView.translatesAutoresizingMaskIntoConstraints = false
     tableView.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
+    tableView.register(NoteTableViewCell.self, forCellReuseIdentifier: "NoteCell")
+    tableView.separatorStyle = .none
     return tableView
   }()
   
@@ -107,6 +109,7 @@ class ChartWeekViewController: UIViewController {
     setupView()
     setupLayout()
     setupCollectionView()
+    setupTableView()
   }
   
   func setupView() {
@@ -179,6 +182,11 @@ class ChartWeekViewController: UIViewController {
     contentChartCollectionView.dataSource = self
     contentChartCollectionView.delegate = self
   }
+  
+  func setupTableView() {
+    noteTableView.delegate = self
+    noteTableView.dataSource = self
+  }
 }
 
 extension ChartWeekViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -190,7 +198,6 @@ extension ChartWeekViewController: UICollectionViewDelegate, UICollectionViewDat
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCell", for: indexPath) as! WeekChartCollectionViewCell
     cell.maxHour = 10
     cell.hour = CGFloat.random(in: 7...10)
-    cell.addGradient()
     return cell
   }
   
@@ -210,4 +217,17 @@ extension ChartWeekViewController: UICollectionViewDelegate, UICollectionViewDat
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return 0
   }
+}
+
+extension ChartWeekViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 20
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
+    return cell
+  }
+  
+  
 }
