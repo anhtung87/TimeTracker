@@ -83,8 +83,11 @@ class HomeViewController: UIViewController {
     let segmentedControl = StateSegmentedControl(items: ["Đang thực hiện", "Hoàn thành"])
     segmentedControl.translatesAutoresizingMaskIntoConstraints = false
     segmentedControl.selectedSegmentIndex = 0
+    segmentedControl.backgroundColor = hexStringToUIColor(hex: "F6F9F9")
     segmentedControl.tintColor = hexStringToUIColor(hex: "66A8FB")
     segmentedControl.selectedSegmentTintColor = hexStringToUIColor(hex: "66A8FB")
+    segmentedControl.layer.borderColor = hexStringToUIColor(hex: "66A8FB").cgColor
+    segmentedControl.layer.borderWidth = 1
     return segmentedControl
   }()
   
