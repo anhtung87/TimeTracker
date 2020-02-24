@@ -90,14 +90,12 @@ class ViewController: UIViewController {
     view.backgroundColor = .white
     setupNavigation()
     setupView()
-//    setupLayout()
     setupAction()
   }
   
   override func viewSafeAreaInsetsDidChange() {
     setupLayout()
     screenScrollView.contentOffset = CGPoint(x: 0, y: view.safeAreaInsets.top)
-    
   }
   
   //  MARK: setup view and layout
