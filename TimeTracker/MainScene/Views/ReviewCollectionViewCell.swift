@@ -56,6 +56,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
   func setupView() {
     self.addSubview(containerView)
     containerView.addSubview(percentageView)
+    
     containerView.addSubview(hourLabel)
     containerView.addSubview(classifyLabel)
   }
