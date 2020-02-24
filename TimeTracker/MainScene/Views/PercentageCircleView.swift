@@ -55,6 +55,7 @@ class PercentageCircleView: UIView {
     circleShapeLayer!.lineWidth = 5
     circleShapeLayer!.strokeColor = lineColor?.cgColor
     circleShapeLayer!.fillColor = UIColor.clear.cgColor
+    circleShapeLayer!.lineCap = CAShapeLayerLineCap.round
     circleShapeLayer!.strokeEnd = 0.0
     self.layer.addSublayer(circleShapeLayer!)
   }

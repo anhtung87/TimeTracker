@@ -89,6 +89,6 @@ class WeekChartCollectionViewCell: UICollectionViewCell {
     hourView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
     hourView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0).isActive = true
     hourView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.6).isActive = true
-    hourView.heightAnchor.constraint(equalToConstant: height / maxHour! * hour!).isActive = true
+    hourView.heightAnchor.constraint(equalToConstant: height / self.maxHour! * self.hour!).isActive = true
   }
 }
