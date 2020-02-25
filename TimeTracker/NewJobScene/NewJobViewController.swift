@@ -173,10 +173,10 @@ class NewJobViewController: UIViewController {
     
     dateTextField.topAnchor.constraint(equalTo: sceneView.topAnchor, constant: 24).isActive = true
     dateTextField.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor, constant: 0).isActive = true
-    dateTextField.widthAnchor.constraint(equalTo: sceneView.widthAnchor, multiplier: 0.75).isActive = true
+    dateTextField.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 32).isActive = true
     dateTextField.heightAnchor.constraint(equalToConstant: 36).isActive = true
     
-    startTimeLabel.topAnchor.constraint(equalTo: dateTextField.bottomAnchor, constant: 32).isActive = true
+    startTimeLabel.topAnchor.constraint(equalTo: dateTextField.bottomAnchor, constant: 16).isActive = true
     startTimeLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     startTimeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     startTimeLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
@@ -186,7 +186,7 @@ class NewJobViewController: UIViewController {
     startTimeTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
     startTimeTextField.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
     
-    endTimeLabel.topAnchor.constraint(equalTo: startTimeTextField.bottomAnchor, constant: 32).isActive = true
+    endTimeLabel.topAnchor.constraint(equalTo: startTimeTextField.bottomAnchor, constant: 16).isActive = true
     endTimeLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     endTimeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     endTimeLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
@@ -196,7 +196,7 @@ class NewJobViewController: UIViewController {
     endTimeTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
     endTimeTextField.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
     
-    contentLabel.topAnchor.constraint(equalTo: endTimeTextField.bottomAnchor, constant: 32).isActive = true
+    contentLabel.topAnchor.constraint(equalTo: endTimeTextField.bottomAnchor, constant: 16).isActive = true
     contentLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     contentLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     contentLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
@@ -206,7 +206,7 @@ class NewJobViewController: UIViewController {
     contentTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
     contentTextField.heightAnchor.constraint(greaterThanOrEqualToConstant: 36).isActive = true
     
-    nameJobLabel.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 32).isActive = true
+    nameJobLabel.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 16).isActive = true
     nameJobLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     nameJobLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     nameJobLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
@@ -222,7 +222,7 @@ class NewJobViewController: UIViewController {
     cancelButton.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
     cancelButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32).isActive = true
     
-    submitButton.topAnchor.constraint(greaterThanOrEqualTo: nameJobTextField.bottomAnchor, constant: 32).isActive = true
+    submitButton.topAnchor.constraint(greaterThanOrEqualTo: nameJobTextField.bottomAnchor, constant: 16).isActive = true
     submitButton.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     submitButton.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
     submitButton.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true

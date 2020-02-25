@@ -125,17 +125,17 @@ class JobPickerTableViewCell: UITableViewCell {
     percentLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
     
     verticalLineView.topAnchor.constraint(equalTo: horizontalLineView.bottomAnchor, constant: 0).isActive = true
-    verticalLineView.leadingAnchor.constraint(equalTo: percentLabel.trailingAnchor, constant: 8).isActive = true
+    verticalLineView.leadingAnchor.constraint(equalTo: percentLabel.trailingAnchor, constant: 16).isActive = true
     verticalLineView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8).isActive = true
     verticalLineView.widthAnchor.constraint(equalToConstant: 1).isActive = true
     
     startLabel.topAnchor.constraint(equalTo: horizontalLineView.bottomAnchor, constant: 8).isActive = true
-    startLabel.leadingAnchor.constraint(equalTo: verticalLineView.trailingAnchor, constant: 16).isActive = true
+    startLabel.leadingAnchor.constraint(equalTo: verticalLineView.trailingAnchor, constant: 32).isActive = true
     startLabel.trailingAnchor.constraint(lessThanOrEqualTo: containerView.trailingAnchor, constant: -8).isActive = true
     startLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
     
     endLabel.topAnchor.constraint(equalTo: startLabel.bottomAnchor, constant: 8).isActive = true
-    endLabel.leadingAnchor.constraint(equalTo: verticalLineView.trailingAnchor, constant: 16).isActive = true
+    endLabel.leadingAnchor.constraint(equalTo: verticalLineView.trailingAnchor, constant: 32).isActive = true
     endLabel.trailingAnchor.constraint(lessThanOrEqualTo: containerView.trailingAnchor, constant: -8).isActive = true
     endLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
   }

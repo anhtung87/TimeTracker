@@ -13,7 +13,7 @@ class JobInputTextField: UITextField {
   var textSize: CGFloat = 16
   
   // tạo lề cho phần nhập input
-  let padding = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 20)
+  let padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

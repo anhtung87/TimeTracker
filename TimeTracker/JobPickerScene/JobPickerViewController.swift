@@ -53,9 +53,24 @@ class JobPickerViewController: UIViewController {
   func setupNavigation() {
     navigationController?.navigationBar.barTintColor = hexStringToUIColor(hex: "66A8FB")
     navigationItem.titleView = titleNavigationLabel
-    let rightButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+    
+    let rightButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createJob))
     rightButton.tintColor = .white
     navigationItem.rightBarButtonItem = rightButton
+    
+    let leftButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(cancel))
+    leftButton.tintColor = .white
+    navigationItem.leftBarButtonItem = leftButton
+  }
+  
+  @objc func createJob() {
+    let destinationVC = CreateJobViewController()
+    navigationController?.modalPresentationStyle = .overFullScreen
+    navigationController?.pushViewController(destinationVC, animated: true)
+  }
+  
+  @objc func cancel() {
+    navigationController?.dismiss(animated: true, completion: {})
   }
   
   func setupView() {
@@ -73,6 +88,8 @@ class JobPickerViewController: UIViewController {
     jobTableView.delegate = self
     jobTableView.dataSource = self
   }
+  
+  
 }
 
 extension JobPickerViewController: UITableViewDelegate, UITableViewDataSource {
@@ -96,5 +113,9 @@ extension JobPickerViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.cellForRow(at: indexPath)?.isSelected = false
+    let destinationVC = NewJobViewController()
+    navigationController?.pushViewController(destinationVC, animated: true)
+    let cell = tableView.cellForRow(at: indexPath) as! JobPickerTableViewCell
+    navigationItem.title = cell.nameJobLabel.text
   }
 }
