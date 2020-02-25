@@ -34,9 +34,10 @@ class NewJobViewController: UIViewController {
     return view
   }()
   
-  let dateTextField: UITextField = {
-    let textField = UITextField()
+  let dateTextField: JobInputTextField = {
+    let textField = JobInputTextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.placeholder = "Thứ ba, ngày 07/01/2020"
     return textField
   }()
   
@@ -49,9 +50,10 @@ class NewJobViewController: UIViewController {
     return label
   }()
   
-  let startTimeTextField: UITextField = {
-    let textField = UITextField()
+  let startTimeTextField: JobInputTextField = {
+    let textField = JobInputTextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.placeholder = "08:30 - Sáng"
     return textField
   }()
   
@@ -64,10 +66,68 @@ class NewJobViewController: UIViewController {
     return label
   }()
   
-  let endTimeTextField: UITextField = {
-    let textField = UITextField()
+  let endTimeTextField: JobInputTextField = {
+    let textField = JobInputTextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.placeholder = "10:15 - Sáng"
     return textField
+  }()
+  
+  let contentLabel: UILabel = {
+    let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.text = "Nội dung"
+    label.textColor = hexStringToUIColor(hex: "303D3C")
+    label.font = .systemFont(ofSize: 16)
+    return label
+  }()
+  
+  let contentTextField: JobInputTextField = {
+    let textField = JobInputTextField()
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.placeholder = "chi tiết công việc"
+    return textField
+  }()
+  
+  let nameJobLabel: UILabel = {
+    let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.text = "Tên công việc"
+    label.textColor = hexStringToUIColor(hex: "303D3C")
+    label.font = .systemFont(ofSize: 16)
+    return label
+  }()
+  
+  let nameJobTextField: JobInputTextField = {
+    let textField = JobInputTextField()
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.placeholder = "Thẩm định hồ sơ"
+    return textField
+  }()
+  
+  let submitButton: UIButton = {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.layer.cornerRadius = 8
+    button.layer.borderWidth = 1
+    button.layer.borderColor = hexStringToUIColor(hex: "F2B53A").cgColor
+    button.backgroundColor = hexStringToUIColor(hex: "F2B53A")
+    button.setTitle("Hoàn thành", for: .normal)
+    button.titleLabel?.font = .systemFont(ofSize: 16)
+    return button
+  }()
+  
+  let cancelButton: UIButton = {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.layer.cornerRadius = 8
+    button.layer.borderWidth = 1
+    button.layer.borderColor = hexStringToUIColor(hex: "303D3C").cgColor
+    button.backgroundColor = .clear
+    button.setTitle("Thoát", for: .normal)
+    button.titleLabel?.font = .systemFont(ofSize: 16)
+    button.setTitleColor(hexStringToUIColor(hex: "303D3C"), for: .normal)
+    return button
   }()
   
   override func viewDidLoad() {
@@ -76,6 +136,7 @@ class NewJobViewController: UIViewController {
     setupNavigation()
     setupView()
     setupLayout()
+    setupTextField()
   }
   
   func setupNavigation() {
@@ -91,6 +152,12 @@ class NewJobViewController: UIViewController {
     sceneView.addSubview(startTimeTextField)
     sceneView.addSubview(endTimeLabel)
     sceneView.addSubview(endTimeTextField)
+    sceneView.addSubview(contentLabel)
+    sceneView.addSubview(contentTextField)
+    sceneView.addSubview(nameJobLabel)
+    sceneView.addSubview(nameJobTextField)
+    sceneView.addSubview(submitButton)
+    sceneView.addSubview(cancelButton)
   }
   
   func setupLayout() {
@@ -128,5 +195,61 @@ class NewJobViewController: UIViewController {
     endTimeTextField.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
     endTimeTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
     endTimeTextField.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
+    
+    contentLabel.topAnchor.constraint(equalTo: endTimeTextField.bottomAnchor, constant: 32).isActive = true
+    contentLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    contentLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
+    contentLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
+    
+    contentTextField.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 8).isActive = true
+    contentTextField.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    contentTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
+    contentTextField.heightAnchor.constraint(greaterThanOrEqualToConstant: 36).isActive = true
+    
+    nameJobLabel.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 32).isActive = true
+    nameJobLabel.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    nameJobLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
+    nameJobLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
+    
+    nameJobTextField.topAnchor.constraint(equalTo: nameJobLabel.bottomAnchor, constant: 8).isActive = true
+    nameJobTextField.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    nameJobTextField.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
+    nameJobTextField.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
+    
+    cancelButton.topAnchor.constraint(equalTo: submitButton.bottomAnchor, constant: 16).isActive = true
+    cancelButton.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    cancelButton.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
+    cancelButton.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
+    cancelButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32).isActive = true
+    
+    submitButton.topAnchor.constraint(greaterThanOrEqualTo: nameJobTextField.bottomAnchor, constant: 32).isActive = true
+    submitButton.leadingAnchor.constraint(equalTo: dateTextField.leadingAnchor, constant: 0).isActive = true
+    submitButton.trailingAnchor.constraint(equalTo: dateTextField.trailingAnchor, constant: 0).isActive = true
+    submitButton.heightAnchor.constraint(equalTo: dateTextField.heightAnchor, multiplier: 1).isActive = true
+  }
+  
+  func setupTextField() {
+    dateTextField.delegate = self
+    startTimeTextField.delegate = self
+    endTimeTextField.delegate = self
+    contentTextField.delegate = self
+  }
+}
+
+extension NewJobViewController: UITextFieldDelegate {
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    UIView.animate(withDuration: 0.28, animations: {
+      textField.layer.cornerRadius = 18
+      textField.layer.borderColor = hexStringToUIColor(hex: "3B84F1").cgColor
+      textField.layer.borderWidth = 1.5
+    })
+  }
+  
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    UIView.animate(withDuration: 0.28, animations: {
+      textField.layer.cornerRadius = 8
+      textField.layer.borderColor = hexStringToUIColor(hex: "303D3C").cgColor
+      textField.layer.borderWidth = 0.5
+    })
   }
 }

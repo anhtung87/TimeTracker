@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,7 @@
 		6D696AC124036FD800BAA7AB /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC024036FD800BAA7AB /* InfoCollectionViewCell.swift */; };
 		6D696AC424037D0B00BAA7AB /* NewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC324037D0B00BAA7AB /* NewJobViewController.swift */; };
 		6D696AC62403ABC500BAA7AB /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC52403ABC500BAA7AB /* EmptyViewController.swift */; };
+		6D696AC82404C19800BAA7AB /* JobInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC72404C19800BAA7AB /* JobInputTextField.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -95,6 +96,7 @@
 		6D696AC024036FD800BAA7AB /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D696AC324037D0B00BAA7AB /* NewJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobViewController.swift; sourceTree = "<group>"; };
 		6D696AC52403ABC500BAA7AB /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		6D696AC72404C19800BAA7AB /* JobInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInputTextField.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +126,6 @@
 				76310A57D718D9F610D0CFC2 /* Pods-TimeTracker.debug.xcconfig */,
 				449C18CD7B18E3F024D770F5 /* Pods-TimeTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -229,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				6D696AC324037D0B00BAA7AB /* NewJobViewController.swift */,
+				6D696AC72404C19800BAA7AB /* JobInputTextField.swift */,
 			);
 			path = NewJobScene;
 			sourceTree = "<group>";
@@ -443,6 +445,7 @@
 				6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */,
 				6D696A6323FF8E1500BAA7AB /* QuarterCircleView.swift in Sources */,
 				6D696AC124036FD800BAA7AB /* InfoCollectionViewCell.swift in Sources */,
+				6D696AC82404C19800BAA7AB /* JobInputTextField.swift in Sources */,
 				6D696AA0240018CE00BAA7AB /* CircleButton.swift in Sources */,
 				6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */,
 				6D696ABD2402BA6C00BAA7AB /* JobTypeTableViewCell.swift in Sources */,

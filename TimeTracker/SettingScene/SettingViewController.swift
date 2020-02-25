@@ -112,7 +112,7 @@ class SettingViewController: UIViewController {
     settingButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
     settingButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
     settingButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
-    settingButton.topAnchor.constraint(equalTo: infoCollectionView.bottomAnchor, constant: UIScreen.main.bounds.maxX / 9).isActive = true
+    settingButton.topAnchor.constraint(greaterThanOrEqualTo: infoCollectionView.bottomAnchor, constant: 32).isActive = true
     
     changePasswordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
     changePasswordButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
@@ -123,6 +123,7 @@ class SettingViewController: UIViewController {
     logOutButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
     logOutButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
     logOutButton.topAnchor.constraint(equalTo: changePasswordButton.bottomAnchor, constant: 16).isActive = true
+    logOutButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(tabBarController?.tabBar.bounds.height)! - 32).isActive = true
   }
   
   func setupCollectionView() {
