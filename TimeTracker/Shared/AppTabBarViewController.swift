@@ -108,8 +108,8 @@ class AppTabBarViewController: UITabBarController, UITabBarControllerDelegate {
   }
   
   @objc func routToNewJobScene() {
-    let newJobVC2 = NewJobViewController()
-    let navigation = UINavigationController(rootViewController: newJobVC2)
+    let destinationVC = JobPickerViewController()
+    let navigation = UINavigationController(rootViewController: destinationVC)
     navigation.modalPresentationStyle = .fullScreen
     present(navigation, animated: true, completion: {})
     

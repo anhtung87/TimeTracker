@@ -46,6 +46,9 @@
 		6D696AC424037D0B00BAA7AB /* NewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC324037D0B00BAA7AB /* NewJobViewController.swift */; };
 		6D696AC62403ABC500BAA7AB /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC52403ABC500BAA7AB /* EmptyViewController.swift */; };
 		6D696AC82404C19800BAA7AB /* JobInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696AC72404C19800BAA7AB /* JobInputTextField.swift */; };
+		6D696ACB2405004800BAA7AB /* JobPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696ACA2405004800BAA7AB /* JobPickerViewController.swift */; };
+		6D696ACD240501D700BAA7AB /* JobPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696ACC240501D700BAA7AB /* JobPickerTableViewCell.swift */; };
+		6D696ACF240521C300BAA7AB /* JobPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D696ACE240521C300BAA7AB /* JobPicker.swift */; };
 		6D8EA38D23FA76470064FB99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EA38C23FA76470064FB99 /* Utilities.swift */; };
 		6DADFA2B23F3E0790010D080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2A23F3E0790010D080 /* AppDelegate.swift */; };
 		6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADFA2C23F3E0790010D080 /* SceneDelegate.swift */; };
@@ -97,6 +100,9 @@
 		6D696AC324037D0B00BAA7AB /* NewJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJobViewController.swift; sourceTree = "<group>"; };
 		6D696AC52403ABC500BAA7AB /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		6D696AC72404C19800BAA7AB /* JobInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInputTextField.swift; sourceTree = "<group>"; };
+		6D696ACA2405004800BAA7AB /* JobPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPickerViewController.swift; sourceTree = "<group>"; };
+		6D696ACC240501D700BAA7AB /* JobPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPickerTableViewCell.swift; sourceTree = "<group>"; };
+		6D696ACE240521C300BAA7AB /* JobPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPicker.swift; sourceTree = "<group>"; };
 		6D8EA38C23FA76470064FB99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6DADFA2723F3E0790010D080 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADFA2A23F3E0790010D080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +241,16 @@
 			path = NewJobScene;
 			sourceTree = "<group>";
 		};
+		6D696AC92405001800BAA7AB /* JobPickerScene */ = {
+			isa = PBXGroup;
+			children = (
+				6D696ACA2405004800BAA7AB /* JobPickerViewController.swift */,
+				6D696ACC240501D700BAA7AB /* JobPickerTableViewCell.swift */,
+				6D696ACE240521C300BAA7AB /* JobPicker.swift */,
+			);
+			path = JobPickerScene;
+			sourceTree = "<group>";
+		};
 		6D8EA38B23FA763A0064FB99 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +284,7 @@
 		6DADFA2923F3E0790010D080 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6D696AC92405001800BAA7AB /* JobPickerScene */,
 				6D696AC224037CDF00BAA7AB /* NewJobScene */,
 				6D696AB72402AB6A00BAA7AB /* ChartSettingScene */,
 				6D696AAD2400EB4100BAA7AB /* SettingScene */,
@@ -435,9 +452,11 @@
 				6D696ABB2402B40500BAA7AB /* JobPercentage.swift in Sources */,
 				6D696A7B23FFFB4600BAA7AB /* ViewController.swift in Sources */,
 				6D696AB52402874100BAA7AB /* NoteTableViewCell.swift in Sources */,
+				6D696ACF240521C300BAA7AB /* JobPicker.swift in Sources */,
 				6D696A8023FFFB7300BAA7AB /* CustomTextField.swift in Sources */,
 				6D696A6123FF771900BAA7AB /* MainViewController.swift in Sources */,
 				6D696A9C24000BBA00BAA7AB /* JobTableViewCell.swift in Sources */,
+				6D696ACB2405004800BAA7AB /* JobPickerViewController.swift in Sources */,
 				6D696AA42400D11500BAA7AB /* AppTabBarViewController.swift in Sources */,
 				6D696A6523FF961300BAA7AB /* CircleImageView.swift in Sources */,
 				6D696ABF24036E2D00BAA7AB /* User.swift in Sources */,
@@ -459,6 +478,7 @@
 				6D696A6723FFB96500BAA7AB /* ReviewCollectionViewCell.swift in Sources */,
 				6D696AAF2400EB5400BAA7AB /* SettingViewController.swift in Sources */,
 				6DADFA2D23F3E0790010D080 /* SceneDelegate.swift in Sources */,
+				6D696ACD240501D700BAA7AB /* JobPickerTableViewCell.swift in Sources */,
 				6D696AC62403ABC500BAA7AB /* EmptyViewController.swift in Sources */,
 				6D696A7C23FFFB4600BAA7AB /* ScreenView.swift in Sources */,
 			);
